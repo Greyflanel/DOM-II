@@ -46,6 +46,7 @@ changeImg.addEventListener("click", () => {
 
 const changeAnotherImg = document.querySelector(".img-content img");
 // console.log(changeAnotherImg)
+
 changeAnotherImg.addEventListener("dblclick", () => {
     changeAnotherImg.src = "https://cdn.pixabay.com/photo/2017/09/12/11/56/universe-2742113_960_720.jpg"
 });
@@ -55,6 +56,7 @@ changeAnotherImg.addEventListener("click", () => {
 
 const changeToNewImage = document.querySelector(".intro img");
 // console.log(changeToNewImage)
+
 changeToNewImage.addEventListener("dblclick", () => {
     changeToNewImage.src = "https://image.businessinsider.com/5ba3f311e55aa8b2058b4567?width=1500&format=jpeg&auto=webp"
 });
@@ -64,12 +66,42 @@ changeToNewImage.addEventListener("click", () => {
 
 const justOneMoreImage = document.querySelector(".content-destination img");
 // console.log(justOneMoreImage)
+
 justOneMoreImage.addEventListener("dblclick", () => {
     justOneMoreImage.src = "https://solarsystem.nasa.gov/system/downloadable_items/709_solarsystem_0.jpg"
 });
+
 justOneMoreImage.addEventListener("click", () => {
     justOneMoreImage.src = "img/destination.jpg"
 });
+
+const button = document.querySelectorAll(".btn");
+// console.log(button)
+button.forEach(btn => {
+    btn.textContent = "Don't Click Me";
+    btn.style.backgroundColor = "purple";
+    btn.addEventListener("click", () => {
+        btn.textContent = "I Warned You!";
+        btn.style.backgroundColor = "red"
+    }); 
+});
+
+const text = document.querySelectorAll(".destination p");
+// console.log(text)
+text.forEach(p => {
+    p.textContent = "NO, NO, NOooo!!! ";
+    p.style.fontSize = "5rem";
+    p.addEventListener("click", () => {
+        p.style.backgroundColor = "black";
+        p.style.color = "green"
+        p.style.borderRadius = "25px"
+    })
+    p.addEventListener("dblclick", () => {
+        p.style.width = 0;
+    })
+})
+
+
 
 
 
